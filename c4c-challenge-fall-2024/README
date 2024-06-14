@@ -1,0 +1,64 @@
+                                C4C Coding Challenge - Sarah Cooper
+<--------------------------------------------------------------------------------------------------------->
+Starting the App:
+
+1. Clone this repo on to your computer
+2. Navigate to the root of the project and run
+    npm install
+3. To run the frontend
+    npm run dev
+4. Frontend server will be on localhost:3000
+5. Make sure to also run the dev server, can be done through whatever ide you're using
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+Components:
+
+server.js:
+    The backend is located in server.js. I used express, provided in the starter code.
+    There are 3 end points
+     - / (get): gets all the players info from the df
+     - /partners (post): adds a new partner to the df
+     - /partners/:id (delete): deletes a partner from the df with a given id.
+
+Frontend:
+    Dashboard: main frontend page.
+    EditablePartnerFile: A modal that pops up when a user wants to add a new org
+    PartnerTile: Organization cards that display on the main dashboard.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+Design Choices:
+
+- for my database I choose to use Supabase
+    - it is easy to manage, and I only needed to create one table (PartnerOrganization)
+    - i did not include any security measures, however Supabase allows for scalability in the
+      future: admin privileges and other security would be easy to add
+- for the frontend I choose to use bootstrap
+    - i am familiar with a lot of the React Bootstrap components, so it was easy to organize
+      the frontend
+    - i wanted to stick to the 4-hour time suggestion, so I choose a frontend design that is easy
+      to use
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+Reflection
+
+    What I learned:
+       At my current co-op, I use React to build the frontend, however we use classes instead of functions,
+    so I am able to do things such as setState(). When I got the starter code, I saw that the main components
+    were functions. I decided to roll with it and learn how to use useState in this way.
+        I also learned how to query from a database using express. I am used to using django, so this was a
+    cool learning experience.
+
+    What I would do differently:
+        If I had more time, I would have created separate pages for each organization. This way, if the user
+    wanted more information, they could go to an entire page and find it. I would also put the "create a new
+    organization" tool on a new page, because if this website was to be scaled, the user would problem want
+    to put more information than just the name, logo, and desc.
+        I would customize the frontend more. I would create my own buttons, form groups etc. and make the
+    website more personalized.
+
+    What Issues I ran into:
+        When doing this project I originally tried to use pg Admin 4 to manage my database/server. This caused
+    a lot of complications, so I decided to switch to Supabase which is a lot more user-friendly.
+        I also ran into some issues with running the actual project. I had a project running before on localhost3000
+    so it took a while and a lot of StackOverflow searches to realize that something else was using localhost
+    and I had to kill that process.
+
